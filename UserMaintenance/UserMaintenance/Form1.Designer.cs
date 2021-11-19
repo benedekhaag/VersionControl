@@ -33,6 +33,7 @@
             this.lbFullName = new System.Windows.Forms.Label();
             this.txtFullName = new System.Windows.Forms.TextBox();
             this.btFajlba = new System.Windows.Forms.Button();
+            this.btDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox1
@@ -79,11 +80,22 @@
             this.btFajlba.UseVisualStyleBackColor = true;
             this.btFajlba.Click += new System.EventHandler(this.btFajlba_Click);
             // 
+            // btDelete
+            // 
+            this.btDelete.Location = new System.Drawing.Point(162, 225);
+            this.btDelete.Name = "btDelete";
+            this.btDelete.Size = new System.Drawing.Size(138, 23);
+            this.btDelete.TabIndex = 9;
+            this.btDelete.Text = "button1";
+            this.btDelete.UseVisualStyleBackColor = true;
+            this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(413, 295);
+            this.Controls.Add(this.btDelete);
             this.Controls.Add(this.btFajlba);
             this.Controls.Add(this.txtFullName);
             this.Controls.Add(this.lbFullName);
@@ -104,6 +116,7 @@
         private System.Windows.Forms.Label lbFullName;
         private System.Windows.Forms.TextBox txtFullName;
         private System.Windows.Forms.Button btFajlba;
+        private System.Windows.Forms.Button btDelete;
     }
 }
 

@@ -28,12 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.cbEv = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btExcel = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // cbEv
+            // 
+            this.cbEv.FormattingEnabled = true;
+            this.cbEv.Location = new System.Drawing.Point(92, 10);
+            this.cbEv.Name = "cbEv";
+            this.cbEv.Size = new System.Drawing.Size(121, 21);
+            this.cbEv.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Év választása";
+            // 
+            // btExcel
+            // 
+            this.btExcel.Location = new System.Drawing.Point(228, 10);
+            this.btExcel.Name = "btExcel";
+            this.btExcel.Size = new System.Drawing.Size(108, 23);
+            this.btExcel.TabIndex = 2;
+            this.btExcel.Text = "Excelbe mentés";
+            this.btExcel.UseVisualStyleBackColor = true;
+            this.btExcel.Click += new System.EventHandler(this.btExcel_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(355, 45);
+            this.Controls.Add(this.btExcel);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cbEv);
+            this.Name = "Form1";
+            this.Text = "Olimpiai Medálok";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ComboBox cbEv;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btExcel;
     }
 }
 

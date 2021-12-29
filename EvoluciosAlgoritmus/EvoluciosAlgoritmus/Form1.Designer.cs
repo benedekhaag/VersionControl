@@ -29,22 +29,34 @@
         private void InitializeComponent()
         {
             this.GenerationLabel = new System.Windows.Forms.Label();
+            this.startButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // GenerationLabel
             // 
             this.GenerationLabel.AutoSize = true;
-            this.GenerationLabel.Location = new System.Drawing.Point(317, 261);
+            this.GenerationLabel.Location = new System.Drawing.Point(318, 255);
             this.GenerationLabel.Name = "GenerationLabel";
             this.GenerationLabel.Size = new System.Drawing.Size(66, 13);
             this.GenerationLabel.TabIndex = 0;
             this.GenerationLabel.Text = "1. generáció";
+            // 
+            // startButton
+            // 
+            this.startButton.Location = new System.Drawing.Point(390, 250);
+            this.startButton.Name = "startButton";
+            this.startButton.Size = new System.Drawing.Size(75, 23);
+            this.startButton.TabIndex = 1;
+            this.startButton.Text = "Start";
+            this.startButton.UseVisualStyleBackColor = true;
+            this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(697, 283);
+            this.Controls.Add(this.startButton);
             this.Controls.Add(this.GenerationLabel);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -56,6 +68,7 @@
         #endregion
 
         private System.Windows.Forms.Label GenerationLabel;
+        private System.Windows.Forms.Button startButton;
     }
 }
 

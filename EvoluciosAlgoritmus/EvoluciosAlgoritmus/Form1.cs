@@ -21,6 +21,8 @@ namespace EvoluciosAlgoritmus
         int nbrOfStepsIncrement = 10;
         int generation = 1;
 
+        Brain WinnerBrain;
+
         public Form1()
         {
             InitializeComponent();
@@ -63,6 +65,23 @@ namespace EvoluciosAlgoritmus
                     gc.AddPlayer(b.Mutate());
             }
             gc.Start();
+
+            var winners = from p in topplayers where p.IsWinner select p;
+            if (winners.Count()>0)
+            {
+                WinnerBrain = winners.FirstOrDefault().Brain.Clone();
+                gc.GameOver -= Gc_GameOver;
+                return;
+            }
+        }
+
+        private void startButton_Click(object sender, EventArgs e)
+        {
+            gc.ResetCurrentLevel();
+            gc.AddPlayer(WinnerBrain.Clone());
+            gc.AddPlayer();
+            ga.Focus();
+            gc.Start(true);
         }
     }
 }
